@@ -1,2 +1,2 @@
-# react-blog-app
-react-blog-app
+# reactReduxStarter
+reactReduxStarter

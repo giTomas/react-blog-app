@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles {
+
+}
+
+.title {
+  font-size: 50px;
+  font-family: sans-serif;
+}
