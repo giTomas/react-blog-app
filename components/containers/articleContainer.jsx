@@ -7,18 +7,22 @@ const {questrial, title} = style;
 // console.log(typeof capitalizeFirstLetter);
 
 
-const Article = ({text}) => (
-  <div>
-   <h2 style={{...questrial, ...title}}>{makeTitle(this.props.params.articleId)}</h2>
-   {text && text.map((p, index) => <p key={index.toString()} style={{marginBottom: "0.5em", lineHeight: "1.5"}}>{p}</p>)}
- </div>
-)
+const Article = ({article}) => (
+  article.body ?
+  (<div>
+   <h2 style={{...questrial, ...title}}>{article.id && makeTitle(article.id)}</h2>
+   <h3>{article.date && (new Date(article.date).toLocaleDateString())}</h3>
+   {article.body.map((p, index) => <p key={index.toString()} style={{marginBottom: "0.5em", lineHeight: "1.5"}}>{p}</p>)}
+ </div>) :
+ (<p>loading...</p>)
+);
 
 class ArticleContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      article: [],
+      // article: {body: ['loading...']},
+      article: {},
     }
   };
 
@@ -39,9 +43,13 @@ class ArticleContainer extends React.Component {
 
 
   render() {
-    const text = this.state.article.body;
+    const article = this.state.article;
     return (
-      <Article text={text} />
+      <Article article={article}/>
+      // <div>
+      //  <h2 style={{...questrial, ...title}}>{makeTitle(this.props.params.articleId)}</h2>
+      //  {article.body.map((p, index) => <p key={index.toString()} style={{marginBottom: "0.5em", lineHeight: "1.5"}}>{p}</p>)}
+      // </div>
     )
   }
 }
