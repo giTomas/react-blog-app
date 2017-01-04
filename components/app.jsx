@@ -3,7 +3,7 @@ import style from '../styles/style';
 // import {Link} from 'react-router';
 import {Hello} from '../components/hello';
 import {About} from '../components/about';
-import {Articles} from '../components/articles';
+import ArticlesContainer from '../components/containers/articlesContainer';
 import Topics from '../components/topics';
 import {NoMatch} from '../components/noMatch';
 import Animations from '../components/animations';
@@ -13,7 +13,7 @@ import InnerContainer from '../components/innerContainer';
 import { BrowserRouter, Match, Miss, Link } from 'react-router';
 import { capitalizeFirstLetter, addState } from '../helpers/helpers';
 import { ListItem, ListItemRoot } from '../components/listItem';
-import Article from '../components/article';
+import ArticleContainer from '../components/containers/articleContainer';
 
 
 class Container extends React.Component {
@@ -118,13 +118,13 @@ class Container extends React.Component {
 
 
            <Match exactly pattern="/" component={Hello}/>
-           <Match exactly pattern="/articles" component={Articles}/>
+           <Match exactly pattern="/articles" component={ArticlesContainer}/>
            <Match pattern="/topics" component={Topics}/>
            <Match pattern="/about" component={About}/>
            <Match pattern="/animations" component={Animations}/>
            <Match pattern="/events" component={Events}/>
 
-           <Match pattern="/articles/:articleId" component={Article}/>
+           <Match pattern="/articles/:articleId" component={ArticleContainer}/>
 
            <Miss component={NoMatch} />
 
