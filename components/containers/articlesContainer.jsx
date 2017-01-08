@@ -80,7 +80,6 @@ const MediaObjectsList = ({articles, fn1, fn2, selection, filterText}) =>  {
             {list}
           </ul>
         );
-
 };
 
 const MediaObjectsList2 = ({articles, fn1, fn2, selection, filterText}) =>  {

@@ -4,7 +4,7 @@ import style from '../styles/style';
 import {Hello} from '../components/hello';
 import {About} from '../components/about';
 import ArticlesContainer from '../components/containers/articlesContainer';
-import Topics from '../components/topics';
+import Categories from '../components/categories';
 import {NoMatch} from '../components/noMatch';
 import Animations from '../components/animations';
 import Events from '../components/events';
@@ -30,7 +30,7 @@ class Container extends React.Component {
             hovered: false,
         },
         {
-            id: "topics",
+            id: "categories",
             hovered: false,
         },
         {
@@ -119,7 +119,7 @@ class Container extends React.Component {
 
            <Match exactly pattern="/" component={Hello}/>
            <Match exactly pattern="/articles" component={ArticlesContainer}/>
-           <Match pattern="/topics" component={Topics}/>
+           <Match pattern="/categories" component={Categories}/>
            <Match pattern="/about" component={About}/>
            <Match pattern="/animations" component={Animations}/>
            <Match pattern="/events" component={Events}/>
