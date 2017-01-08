@@ -106,7 +106,19 @@ let unprefixed = {
     minWidth: "100%",
     // height: "477px",
     height: "45vh",
-    backgroundImage: "url('assets/images/bg.jpg')",
+    backgroundImage: "url('../assets/images/bg.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "50%",
+    // backgroundAttachment: "fixed",
+    marginLeft: addUnits(-margin, "rem"),
+    marginRight: addUnits(-margin, "rem"),
+    // margin: "0 -1rem",
+  },
+  backgroundImage2: {
+    minWidth: "100%",
+    // height: "477px",
+    height: "45vh",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "50%",
@@ -117,6 +129,9 @@ let unprefixed = {
   },
   questrial: {
     fontFamily: sansSerif,
+  },
+  specialElite: {
+    fontFamily: specialElite,
   },
   title: {
     marginTop: addUnits((2*margin), "rem"),
@@ -135,6 +150,6 @@ const prefixer = new Prefixer({ userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWe
 
 const style = prefixer.prefix(unprefixed);
 
-deepFreeze(style);
+// deepFreeze(style);
 
 export default style;

@@ -4,20 +4,29 @@ import Prefixer from 'inline-style-prefixer';
 import {addUnits} from '../helpers/helpers';
 
 const unprefixed = {
-    mediaObject: {
+    transition: {
+      transition: "all 0.22s ease-out" ,
+    },
+    imageMo:{
+      width: 150,
+      height: 150,
+      objectFit:"cover",
+    },
+    titleMo: {
+      fontSize: "2rem",
+      marginLeft: '0.5rem',
+    },
+    date: {
 
     },
-    mediaObjectImage:{
+    category: {
 
     },
-    mediaObjectTitle: {
-
-    },
-    mediaObjectDate: {
-
-    }, 
-    mediaObjectCategory: {
-
+    link: {
+      display:"flex",
+      textDecoration: "none",
+      color: "black",
+      padding: "1.5rem"
     }
 }
 
